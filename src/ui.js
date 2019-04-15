@@ -88,6 +88,10 @@ class UI {
             this.postSubmit.className = "post-submit btn btn-warning btn-block";
 
             // Create cancel btn
+            if(document.querySelector(".post-cancel")){
+                document.querySelector(".post-cancel").remove();
+            };
+
             const btn = document.createElement("button");
             btn.className = "post-cancel btn btn-dark btn-block";
             btn.appendChild(document.createTextNode("Cancel Edit"));
